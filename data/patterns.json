@@ -1,0 +1,143 @@
+[
+  {
+    "from": [false,  false,  false,  false,  null],
+    "to":   [[false,  false,  false,  false,  false]]
+  },
+  {
+    "from": [false,  false,  false,  null,  false],
+    "to":   [[false,  false,  false,  false,  false]]
+  },
+  {
+    "from": [false,  false,  null,  false,  false],
+    "to":   [[false,  false,  false,  false,  false]]
+  },
+  {
+    "from": [true,  true,  true,  true,  null],
+    "to":   [[true,  true,  true,  true, false]]
+  },
+  {
+    "from": [true,  true,  true,  null,  true],
+    "to":   [[true,  true,  true,  false, true]]
+  },
+  {
+    "from": [true,  true,  null,  true,  true],
+    "to":   [[true,  true,  false, true,  true]]
+  },
+  {
+    "from": [false,  false,  null,  null,  false],
+    "to":   [
+      [false,  false,  false,  null,  false],
+      [false,  false,  null,  false,  false]
+    ]
+  },
+  {
+    "from": [false,  false,  false,  null,  null],
+    "to":   [
+      [false,  false,  false,  null,  false],
+      [false,  false,  false,  false,  null]
+    ]
+  },
+  {
+    "from": [true,  true,  true,  null,  null],
+    "to":   [
+      [true,  true,  true,  null, false],
+      [true,  true,  true,  false, null]
+    ]
+  },
+  {
+    "from": [true,  true,  null,  null,  true],
+    "to":   [
+      [true,  true,  false,  null,  true],
+      [true,  true,  null,  false,  true]
+    ]
+  },
+  {
+    "from": [false,  false,  null,  null,  false],
+    "to":   [
+      [false,  false,  false,  null,  false],
+      [false,  false,  null,  false,  false]
+    ]
+  },
+  {
+    "from": [false,  false,  false,  null,  null],
+    "to":   [
+      [false,  false,  false,  null,  false],
+      [false,  false,  false,  false,  null]
+    ]
+  },
+  {
+    "from": [false,  false,  null,  null,  null],
+    "to":   [
+      [false,  false,  false,  null,  null],
+      [false,  false,  null,  false,  null],
+      [false,  false,  null,  null,  false]
+    ]
+  },
+  {
+    "from": [false,  null,  false,  null,  null],
+    "to":   [
+      [false,  false,  false,  null,  null],
+      [false,  null,  false,  false,  null],
+      [false,  null,  false,  null,  false]
+    ]
+  },
+  {
+    "from": [false,  null,  null,  false,  null],
+    "to":   [
+      [false,  false,  null,  false,  null],
+      [false,  null,  false,  false,  null],
+      [false,  null,  null,  false,  false]
+    ]
+  },
+  {
+    "from": [false,  null,  null,  null,  false],
+    "to":   [
+      [false,  false,  null,  null,  false],
+      [false,  null,  false,  null,  false],
+      [false,  null,  null,  false,  false]
+    ]
+  },
+  {
+    "from": [true,  true,  null,  null,  null],
+    "to":   [
+      [true,  true,  false,  null,  null],
+      [true,  true,  null,  false,  null],
+      [true,  true,  null,  null,  false]
+    ]
+  },
+  {
+    "from": [true,  null,  true,  null,  null],
+    "to":   [
+      [true,  false,  true,  null,  null],
+      [true,  null,  true,  false,  null],
+      [true,  null,  true,  false,  null]
+    ]
+  },
+  {
+    "from": [true,  null,  null,  true,  null],
+    "to":   [
+      [true,  true,  null,  true,  null],
+      [true,  null,  true,  true,  null],
+      [true,  null,  null,  true,  null],
+      [true,  null,  null,  true,  true]
+    ]
+  },
+  {
+    "from": [false,  null,  null,  null,  null],
+    "to":   [
+      [false,  false,  null,  null,  null],
+      [false,  null,  false,  null,  null],
+      [false,  null,  null,  false,  null],
+      [false,  null,  null,  null,  false]
+    ]
+  },
+  {
+    "from": [true,  null,  null,  null,  null],
+    "to":   [
+      [true,  false,  null,  null,  null],
+      [true,  null,  false,  null,  null],
+      [true,  null,  null,  false,  null],
+      [true,  null,  null,  null,  false]
+    ]
+  },
+]
