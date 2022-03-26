@@ -63,7 +63,7 @@ const Spacer = styled.View`
 
 export const BottomBar = ({setRestart, won, lost, clear}) => {
   const createTwoButtonAlertRestartGame = () =>
-    Alert.alert('Alert Title', 'Are you sure?', [
+    Alert.alert('Restart game', 'Are you sure?', [
       {
         text: 'Cancel',
         style: 'cancel',
@@ -72,7 +72,7 @@ export const BottomBar = ({setRestart, won, lost, clear}) => {
     ]);
 
   const createTwoButtonAlertClearStatistics = () =>
-    Alert.alert('Alert Title', 'Are you sure?', [
+    Alert.alert('Clear statistics', 'Are you sure?', [
       {
         text: 'Cancel',
         style: 'cancel',

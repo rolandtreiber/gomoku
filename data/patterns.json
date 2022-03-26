@@ -125,10 +125,7 @@
   {
     "from": [false,  null,  null,  null,  null],
     "to":   [
-      [false,  false,  null,  null,  null],
-      [false,  null,  false,  null,  null],
-      [false,  null,  null,  false,  null],
-      [false,  null,  null,  null,  false]
+      [false,  false,  null,  null,  null]
     ]
   },
   {
@@ -139,5 +136,5 @@
       [true,  null,  null,  false,  null],
       [true,  null,  null,  null,  false]
     ]
-  },
+  }
 ]
