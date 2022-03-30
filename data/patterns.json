@@ -40,7 +40,6 @@
   {
     "from": [true,  true,  true,  null,  null],
     "to":   [
-      [true,  true,  true,  null, false],
       [true,  true,  true,  false, null]
     ]
   },
@@ -100,9 +99,7 @@
   {
     "from": [true,  true,  null,  null,  null],
     "to":   [
-      [true,  true,  false,  null,  null],
-      [true,  true,  null,  false,  null],
-      [true,  true,  null,  null,  false]
+      [true,  true,  false,  null,  null]
     ]
   },
   {

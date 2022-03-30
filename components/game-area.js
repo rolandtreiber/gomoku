@@ -3,6 +3,8 @@ import {ScrollView, TouchableOpacity} from "react-native"
 import styled from "styled-components"
 import X from "../assets/x.png"
 import O from "../assets/o.png"
+import OEnd from "../assets/o-end.png"
+import XEnd from "../assets/x-end.png"
 import patternsData from "../data/patterns.json"
 
 const Container = styled.View`
@@ -57,6 +59,7 @@ export const GameArea = ({restart, setRestart, loading, setLoading, end}) => {
   const [turn, setTurn] = useState(false)
   const [boardWidth, setBoardWidth] = useState(20)
   const [boardHeight, setBoardHeight] = useState(30)
+  const [ended, setEnded] = useState(false)
 
   const resetBoard = (width, height) => {
     let boardData = [];
@@ -69,6 +72,7 @@ export const GameArea = ({restart, setRestart, loading, setLoading, end}) => {
     }
     autosScrollX()
     autosScrollY()
+    setEnded(false)
     return boardData
   }
 
@@ -99,7 +103,7 @@ export const GameArea = ({restart, setRestart, loading, setLoading, end}) => {
   }, [loading, boardData])
 
   const setMark = (coordX, coordY, value) => {
-    if (boardData[coordY][coordX] === null) {
+    if (boardData[coordY][coordX] === null && ended === false) {
       let copy = [...boardData]
       copy[coordY][coordX] = value
       setBoardData([...copy])
@@ -184,7 +188,7 @@ export const GameArea = ({restart, setRestart, loading, setLoading, end}) => {
     || (selection3 && JSON.stringify(selection3.items) === JSON.stringify(wonState))
     || (selection4 && JSON.stringify(selection4.items) === JSON.stringify(wonState))) {
       end(true)
-      setRestart()
+      setEnded(true)
     }
 
     if ((selection1 && JSON.stringify(selection1.items) === JSON.stringify(lostState))
@@ -192,7 +196,7 @@ export const GameArea = ({restart, setRestart, loading, setLoading, end}) => {
       || (selection3 && JSON.stringify(selection3.items) === JSON.stringify(lostState))
       || (selection4 && JSON.stringify(selection4.items) === JSON.stringify(lostState))) {
       end(false)
-      setRestart(false)
+      setEnded(true)
     }
 
     if (selection1 && JSON.stringify(selection1.items) !== JSON.stringify(emptyValue)) {
@@ -272,7 +276,7 @@ export const GameArea = ({restart, setRestart, loading, setLoading, end}) => {
           <GamePlayRowContainer key={"row-"+indexY}>
             {rowData.map((field, indexX) => <TouchableOpacity onPress={() => setMark(indexX, indexY, true)} key={"field-"+indexX+'-'+indexY}>
               <Box>
-                {boardData[indexY][indexX] !== null && <Mark source={boardData[indexY][indexX] === true ? X : O}/>}
+                {boardData[indexY][indexX] !== null && <Mark source={boardData[indexY][indexX] === true ? ended ? XEnd : X : ended ? OEnd : O}/>}
               </Box>
             </TouchableOpacity>)}
           </GamePlayRowContainer>

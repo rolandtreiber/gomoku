@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react";
 import {BottomBar} from "./components/bottom-bar";
 import {GameArea} from "./components/game-area";
 import styled from "styled-components"
-import {ImageBackground} from "react-native";
+import {Alert, ImageBackground} from "react-native";
 import BackgroundImage1 from "./assets/images/bg1.jpg"
 import BackgroundImage2 from "./assets/images/bg2.jpg"
 import BackgroundImage3 from "./assets/images/bg3.jpg"
@@ -35,9 +35,11 @@ export default function App() {
     if (result === true) {
       setWon(won + 1)
       updateStatistics(won + 1, lost)
+      alert('You won!')
     } else {
       setLost(lost + 1)
       updateStatistics(won, lost + 1)
+      alert('You lost!')
     }
   }
 
@@ -76,6 +78,17 @@ export default function App() {
     }
   };
 
+  const createGameEndAlert = (title, message) =>
+  {
+    console.log('alert called')
+    Alert.alert(title, message, [
+      { text: 'OK', onPress: () => {
+          setRestart(!restart)
+        }
+      },
+    ]);
+  }
+
   useEffect(() => {
     loadStatistics()
   }, [])
@@ -91,7 +104,6 @@ export default function App() {
                 loading={loading}
                 restart={restart}
                 setRestart={() => {
-                  setLoading(true)
                   setRestart(!restart)
                 }}
                 end={endGame}/>
